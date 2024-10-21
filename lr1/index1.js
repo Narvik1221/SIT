@@ -6,18 +6,15 @@ function calculateParityBit(bits) {
   }
   return parityBit;
 }
-
 // Функция для моделирования помехи с вероятностью Q
 function introduceNoise(bits, Q) {
   return bits.map((bit) => (Math.random() < Q ? 1 - bit : bit)); // Инвертируем бит с вероятностью Q
 }
-
 // Функция для проверки правильности передачи
 function checkMessage(bits) {
   let parityBit = calculateParityBit(bits);
   return parityBit === 0;
 }
-
 // Моделирование передачи сообщения с одной и двумя ошибками
 function simulateTransmission(bits, Q) {
   let parityBit = calculateParityBit(bits);
@@ -39,16 +36,12 @@ function simulateTransmission(bits, Q) {
     }`
   );
 }
-
 // Исходная последовательность 4 бита
 let originalBits = [1, 0, 1, 1]; // Пример
-
 // Вероятность инверсии бита (Q)
 let Q = 0.2; // Вероятность 20%
-
-// Запуск симуляции
+// Запуск симуляци
 simulateTransmission(originalBits, Q);
-
 // Теперь моделируем передачу с 2 ошибками
 Q = 0.5; // Увеличиваем вероятность до 50% для двух ошибок
 simulateTransmission(originalBits, Q);
