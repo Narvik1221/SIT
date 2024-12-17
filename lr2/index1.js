@@ -3,7 +3,6 @@ let COMPLETED = false;
 let RE_SYNC = false;
 let LINE = 0; // Сигнальная линия: 1 - ноль, 2 - единица
 
-// Генерация случайного числа (эквивалент srand в C++)
 Math.random();
 
 // Функция паузы (Sleep)

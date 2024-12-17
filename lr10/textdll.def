@@ -1,0 +1,3 @@
+EXPORTS
+    read_text @1
+    save_text @2
